@@ -1,0 +1,84 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form{
+    width: 400px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.form-input,
+.form-btn{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-title{
+    text-align: center;
+    margin: 0px 0px 32px 0px;
+    font-weight: normal;
+}
+
+.form-group{
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-label{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.form-input{
+    width: 100%;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+    font-weight: 700;
+    color: #797676;
+}
+
+.form-input:focus{
+    border-bottom: 1px solid #1a73a8;
+}
+
+.form-btn{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #0071f0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.form-btn:focus,
+.form-btn:hover{
+    background-color: rgba(0, 113, 240, 0.7);
+    transition: 0.3s;
+}
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label
+{
+    top: -22px;
+    font-size: 16px;
+    color: #e0e0e0;
+}

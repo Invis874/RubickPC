@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'booking/style/application.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'booking/img/logo.png' %}">
+    <title>Регистрация брони</title>
+</head>
+<body>
+            <form method="post" action="../..">
+                {% csrf_token %}
+                <h1 class="form-title">Регистрация брони</h1>
+            <div class="form-group">
+                <input type="number" value="{{pc}}" class="form-input" placeholder=" " name="id_pc" readonly>
+                <label for="" class="form-label">ID PC</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder=" " name="fio">
+                <label for="" class="form-label">ФИО</label>
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" class="form-input" placeholder=" " name="dtime">
+                <label for="" class="form-label">Время брони</label>
+            </div>
+            <div class="form-group">
+                <input type="time" class="form-input" placeholder=" " name="time">
+                <label for="" class="form-label">Продолжительность</label>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder=" " name="email">
+                <label for="" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-input" placeholder=" " name="tel">
+                <label for="" class="form-label">Телефон</label>
+            </div><br>
+                <button class="form-btn">Регистрация</button>
+            </form>
+</body>
+</html>

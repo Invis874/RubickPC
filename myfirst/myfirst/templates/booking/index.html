@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'booking/style/index.css' %}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'booking/img/logo.png' %}">
+    <title>RubickPC</title>
+
+</head>
+<body>
+
+    <main class="main">
+        <div class="header-logo">
+            <div class="cont">
+            <img style="width: 120px; height: 110px; " src="{% static 'booking/img/pngwing.com (1).png' %}" alt="">
+        </div>
+        </div>
+        <div class="halls">
+            <!--Зал 1-->
+            <div class="room-one room">
+                    <p>Обычный зал</p>
+                <div class="one-block" style="background-image: url('{% static 'booking/img/zal1.jpg' %}');">
+                    <button class="btn-one btn" id="btn">Забронировать</button>
+                    <div class="modal-okno" id="modal-okno">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <p class="pc">Выбирайте компьютер</p>
+                                <div class="block-pc">
+                                    <div class="pc-left">
+                                        {% for i in regular %}
+
+                                            {% if i.id <= 10 %}
+
+                                                {% if i.busy == 0 %}
+                                                    <a><div class="pc-1 club" id="pc-club" style="background-color: red;">{{i.id}}</div></a>
+                                                {% else %}
+                                                    <a href="{% url 'booking:application' i.id %}"><div class="pc-1 club" id="pc-club">{{i.id}}</div></a>
+                                                {% endif %}
+
+                                            {% elif i.id > 10 %}
+
+                                                {% if i.busy == 0 %}
+                                                    <a><div class="pc-1 club1"id="pc-club" style="background-color: red;">{{i.id}}</div></a>
+                                                {% else %}
+                                                    <a href="{% url 'booking:application' i.id %}"><div class="pc-1 club1"id="pc-club">{{i.id}}</div></a>
+                                                {% endif %}
+
+                                            {% endif %}
+
+                                            {% if i.id == 10 %}
+                                                <br>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                                <div id="close" class="close">&#10006</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Зал 2-->
+            <div class="room-two room">
+                    <p>Не обычный зал</p>
+                <div class="two-block " style="background-image: url('{% static 'booking/img/zal2.jpg' %}');">
+                    <button class="btn-two btn" id="btn-1">Забронировать</button>
+                    <div class="modal-okno" id="modal-okno-1">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <p class="pc">Выбирайте компьютер</p>
+                                <div class="block-pc">
+                                    <div class="pc-left">
+                                        {% for i in unusual %}
+
+                                            {% if i.id <= 30 %}
+
+                                                {% if i.busy == 0 %}
+                                                    <a><div class="pc-1 club" id="pc-club" style="background-color: red;">{{i.id}}</div></a>
+                                                {% else %}
+                                                    <a href="{% url 'booking:application' i.id %}"><div class="pc-1 club" id="pc-club">{{i.id}}</div></a>
+                                                {% endif %}
+
+                                            {% elif i.id > 30 %}
+
+                                                {% if i.busy == 0 %}
+                                                    <a><div class="pc-1 club1"id="pc-club" style="background-color: red;">{{i.id}}</div></a>
+                                                {% else %}
+                                                    <a href="{% url 'booking:application' i.id %}"><div class="pc-1 club1"id="pc-club">{{i.id}}</div></a>
+                                                {% endif %}
+
+                                            {% endif %}
+
+                                            {% if i.id == 30 %}
+                                                <br>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                                <div id="close-1" class="close">&#10006</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Зал 3-->
+            <div class="room-three room">
+                <p>VIP зал</p>
+                <div class="three-block" style="background-image: url('{% static 'booking/img/zal3.jpg' %}');">
+                    <button class="btn-three btn" id="btn-2">Забронировать</button>
+                    <div class="modal-okno" id="modal-okno-2">
+                        <div class="modal-container">
+                            <div class="modal-content">
+                                <p class="pc">Выбирайте компьютер</p>
+                                <div class="block-pc">
+                                    <div class="pc-left">
+                                        {% for i in vip %}
+
+                                            {% if i.busy == 0 %}
+                                                <a><div class="pc-1 club" id="pc-club" style="background-color: red;">{{i.id}}</div></a>
+                                            {% else %}
+                                                <a href="{% url 'booking:application' i.id %}"><div class="pc-1 club" id="pc-club">{{i.id}}</div></a>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                                <div id="close-2" class="close">&#10006</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+            <h1 style="font-size: 24px;">Телефон поддержки:</h1>
+            <p  style="font-size: 24px;">+7(900)000-00-00</p>
+
+    </footer>
+    <script src="{% static 'booking/js/code.js' %}"></script>
+</body>
+</html>

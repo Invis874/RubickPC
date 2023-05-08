@@ -1,0 +1,239 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+h1,h2,p{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    background: linear-gradient(45deg, #151515, #454142);
+    height: 800px;
+    max-width: 100vw;
+}
+.cont{
+    padding: 50px 100px 50px 100px;
+}
+.room-one,.room-two,.room-three{
+    text-align: center;
+}
+
+
+.one-block{
+
+    width: 350px;
+    height: 400px;
+    background-color: aqua;
+    float: left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.two-block{
+    width: 350px;
+    height: 400px;
+    background-color: aqua;
+    float: left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-top: 10px;
+
+}
+.three-block{
+    width: 350px;
+    height: 400px;
+    background-color: aqua;
+    float: left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-top: 10px;
+
+}
+.halls{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.room{
+    margin-top: 30px;
+    min-width: 100px;
+}
+
+.btn-one{
+    height: 50px;
+    width: 230px;
+    border-radius: 10px;
+    border: none;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: blue;
+    color: white;
+    transition: 0.3s;
+    
+}
+.btn-two{
+    height: 50px;
+    width: 230px;
+    border-radius: 10px;
+    border: none;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+.btn-three{
+    height: 50px;
+    width: 230px;
+    border-radius: 10px;
+    border: none;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: gold;
+    color: white;
+    transition: 0.3s;
+}
+.btn{
+    margin-top: 300px;
+}
+.btn:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+    color: black;
+}
+
+.footer{
+    background-color: #141414;
+    width: 1780px;
+    height: 100vh;
+    padding: 40px 100px 0px 100px;
+    text-align: right;
+    float: right;
+}
+
+.footer-block{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.modal-okno{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 2;
+    transition: .4s ease-in-out;
+}
+.modal-okno.active{
+    display: block;
+}
+.modal-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content{
+    margin: auto;
+    width: 900px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 15px 100px 15px;
+    position: relative;
+    border: 4px solid rgb(255, 255, 255);
+    background-color: #454142;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover{
+    color: red;
+    transition: 0.3s;
+}
+
+.block-pc{
+    border: 3px solid black;
+    height: 330px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pc{
+    font-size: 30px;
+}
+
+.pc-left, .pc-left-bottom{
+    float: left;
+    height: 200px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.club{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    float: right;
+    margin-left: 30px;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+.club1{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+    background-color: green;
+    margin-left: 30px;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+#pc-club:hover{
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
